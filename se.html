@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Events</title>
+<style>
+body{font-family:'Poppins', sans-serif;
+    background:#fef9f9;
+    text-align:center;
+    padding:50px;
+    color:#2c3e50;}
+
+h1{font-size:36px;
+    margin-bottom:20px;}
+
+p{font-size:18px;
+    margin-bottom:30px;
+    color:#34495e;}
+
+button{background:#ff6b81;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;}
+
+button:hover{background:#c0392b;
+    transform:scale(1.05);}
+</style>
+</head>
+
+<body>
+
+<h1>School Events</h1>
+
+<p id="eventText">Hover or click the button to see what happened.</p>
+
+<button onclick="clickedEvent()" onmouseover="hoverEvent()">Event Action</button>
+
+<script>
+function clickedEvent(){document.getElementById("eventText").innerHTML =
+"You clicked! Events like MVP and VPOP showed our talents.";}
+
+function hoverEvent(){document.getElementById("eventText").innerHTML =
+"You hovered! Our class enjoyed activities like Battle of the Bands.";}
+</script>
+<script>
+function goBack(){
+    window.history.back();
+}
+</script>
+
+<center>
+<button class="fancy-btn" onclick="goBack()">Go Back</button>
+</center>
+
+<style>
+.fancy-btn {
+    background: linear-gradient(90deg, #6a0dad, #9b59ff);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.fancy-btn:hover {
+    background: linear-gradient(90deg, #ff9f00, #ffd700);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.fancy-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+</style>
+
+</body>
+</html>
